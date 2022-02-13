@@ -1,55 +1,51 @@
-const one = document.querySelector('.icon_1')
-const two = document.querySelector('.icon_2')
-const three = document.querySelector('.icon_3')
-const text1 = document.querySelectorAll('.section__text_p')[0]
-const text2 = document.querySelectorAll('.section__text_p')[1]
-const text3 = document.querySelectorAll('.section__text_p')[2]
+
+const sectionBlock = document.querySelectorAll('.section__block_plac')
+const sectionBlockIcon = document.querySelectorAll('.section__block_icon')
+const sectionBlockActivMenu = document.querySelectorAll('.section__block_activ-menu')
 
 
-const f = one.addEventListener('click', () => {
-	if (text1.style.height === '0px') {
-		text1.style.height = '210px'
-		text1.style.padding = '15px 0 15px 15px'
-		text1.style.border = '1px solid #e5e5e5'
+sectionBlock.forEach((el) => {
+	el.addEventListener('click', (event) => {
+		const firstChild = event.currentTarget.firstElementChild
+		if (event.target.closest('.section__block_icon')) {
+			if (firstChild.nextElementSibling.classList.contains('section__text_style')) {
+				
+				sectionBlockActivMenu.forEach((el) => {
+					el.classList.remove('section__text_style')
+				})
+				
+			} else {
+				sectionBlockActivMenu.forEach((el) => {
+					el.classList.remove('section__text_style')
+
+				})
+				firstChild.nextElementSibling.classList.add('section__text_style')
+				
+			}
+		} else {
+
+		}
 		
+	})
+})
+
+document.addEventListener('dblclick', (event) => {
+	if (!event.target.parentElement.closest('.section__block_plac')) {
+		sectionBlockActivMenu.forEach((el) => {
+			el.classList.remove('section__text_style')
+		})
+	}
+})
+
+
+
+document.addEventListener('keydown', event => {
+	if (event.code === 'Escape') {
+		sectionBlockActivMenu.forEach((el) => {
+			el.classList.remove('section__text_style')
+		})
 		
-		
-	} else {
-		text1.style.height = '0px'
-		text1.style.padding = '0 15px  0 15px'
-		text1.style.border = '0px solid #e5e5e5'
+	}
 	
-	}
+
 })
-two.addEventListener('click', () => {
-	if (text2.style.height === '0px') {
-		text2.style.height = '210px'
-		text2.style.padding = '15px 0 15px 15px'
-		text2.style.border = '1px solid #e5e5e5'
-		
-	} else {
-		text2.style.height = '0px'
-		text2.style.padding = '0 15px  0 15px'
-		text2.style.border = '0px solid #e5e5e5'
-		
-	}
-})
-three.addEventListener('click', () => {
-	if (text3.style.height === '0px') {
-		text3.style.height = '210px'
-		text3.style.padding = '15px 0 15px 15px'
-		text3.style.border = '1px solid #e5e5e5'
-		
-	} else {
-		text3.style.height = '0px'
-		text3.style.padding = '0 15px  0 15px'
-		text3.style.border = '0px solid #e5e5e5'
-		
-	}
-})
-
-
-
-
-
-
