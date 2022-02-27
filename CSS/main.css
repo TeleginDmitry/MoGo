@@ -737,3 +737,66 @@ body {
 .section__icon_width:hover .navigator {
 	display: flex;
 }
+
+.section__icon_title {
+	font-size: 20px;
+	color: #333333;
+	font-weight: 400;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section__icon_des {
+	font-size: 20px;
+	color: #999999;
+	font-weight: 300;
+	font-style: italic;
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+}
+.sit {
+	margin: 15px 0px;
+}
+.nav__content-1 {
+	display: flex;
+	justify-content: space-evenly;
+	height: 220px;
+	background-color: #f8f8f8;
+	
+}
+.nav__content-1 img{
+	object-fit: none;
+}
+.section__text_meet {
+	text-transform: uppercase;
+}
+.section__text_lorem {
+	font-family: "Roboto", sans-serif;
+}
+
+
+.section__card__menu {
+	display: flex;
+	justify-content: center;
+	height: 770px;
+	
+}
+.section__page_img {
+}
+.section__card_m {
+	height: 500px;
+}
+.section__card_m img {
+	object-fit: cover;
+	height: 500px;
+	width: 100%;
+}
+.fiv {
+	height: 1000px;
+	
+}
+.sect__img {
+	min-height: 1000px;
+	max-width: 500px;
+}
